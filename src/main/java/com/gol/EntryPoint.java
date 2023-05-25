@@ -34,7 +34,7 @@ public class EntryPoint {
         for (int c = 0; c < totalCount; c++) {
             System.out.println("------------------------------------------------------------------");
             if (gameOfLife.isEquilibriumAchieved()) {
-                System.out.println("Equilibrium Achieved after "+ (c+1) +" Iterations. Stopping");
+                System.out.printf("Equilibrium achieved after %s iterations. Stopping now!", (c+1));
                 break;
             }
             gameOfLife.stepIntoNextGeneration();
