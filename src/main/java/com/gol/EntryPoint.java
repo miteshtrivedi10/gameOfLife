@@ -27,13 +27,14 @@ public class EntryPoint {
 
         final GameOfLife gameOfLife = new GameOfLife(25, aliveCells);
 
-        int totalCount = 10;
+        /* Total iterations for forwarding to next generation */
+        int totalCount = 100;
 
         /* Generate Stages max up to 10 or if Equilibrium is achieved*/
         for (int c = 0; c < totalCount; c++) {
             System.out.println("------------------------------------------------------------------");
             if (gameOfLife.isEquilibriumAchieved()) {
-                System.out.println("Equilibrium Achieved. Stopping");
+                System.out.println("Equilibrium Achieved after "+ (c+1) +" Iterations. Stopping");
                 break;
             }
             gameOfLife.stepIntoNextGeneration();
